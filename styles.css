@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poppins", sans-serif;
+  max-height: 100vh;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  -ms-grid-rows: 10rem 2fr;
+      grid-template-rows: 10rem 2fr;
+      grid-template-areas: "sidebar header header" "sidebar main main" "sidebar main main";
+}
+
+sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: sidebar;
+  background-color: #764af1;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 15px;
+  -ms-grid-rows: 50px 1fr;
+      grid-template-rows: 50px 1fr;
+  color: #f5f5f5;
+}
+
+sidebar img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+sidebar .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+sidebar .header img {
+  height: 35px;
+}
+
+sidebar .menu ul {
+  margin-bottom: 3rem;
+  padding: 0;
+}
+
+sidebar .menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 1rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  justify-items: stretch;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  padding: 1rem;
+  row-gap: rem;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .search label {
+  min-width: 50%;
+  width: 70%;
+}
+
+header .search label input {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
+  width: 100%;
+  background-color: #f3eded;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+header .menu p {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+header .menu .notification-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .menu .profile-picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+header .actions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+header .actions button {
+  background-color: #764af1;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .actions button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+header .user-info .text {
+  font-size: 0.8rem;
+}
+
+header .user-info .name {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+header .user-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+header .user-info p {
+  font-weight: bold;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+main .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+main .cards {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+main .cards .card {
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  padding: 1.5em 2rem;
+  border-radius: 0.5rem;
+  border-left: 0.4rem solid #f32424;
+  row-gap: 3rem;
+}
+
+main .cards .card .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+main .announcement-and-trending {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+main .announcement-and-trending .announcement-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+main .announcement-and-trending .announcements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 0.6rem;
+}
+
+main .announcement-and-trending .announcements .announcement-card {
+  padding-bottom: 1rem;
+}
+
+main .announcement-and-trending .announcements .announcement-card:not(:last-child) {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #e5bbbb;
+}
+
+main .announcement-and-trending .announcements .announcement-card .title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main .announcement-and-trending .announcements .announcement-card .content {
+  font-size: 0.8rem;
+}
+
+main .announcement-and-trending .trending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.5rem;
+  margin-top: 1.5rem;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+
+main .announcement-and-trending .trending .users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  row-gap: 2rem;
+}
+
+main .announcement-and-trending .trending .users .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+main .announcement-and-trending .trending .users .user .username {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+main .announcement-and-trending .trending .users .user .description {
+  color: #00000073;
+}
+
+main .announcement-and-trending .trending .users .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=styles.css.map */
